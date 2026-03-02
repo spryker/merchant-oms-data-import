@@ -36,9 +36,6 @@ class MerchantOmsProcessDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testMerchantOmsProcessImport(): void
     {
         // Arrange

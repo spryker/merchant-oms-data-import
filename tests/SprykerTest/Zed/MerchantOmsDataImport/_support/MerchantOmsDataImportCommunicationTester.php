@@ -30,9 +30,6 @@ class MerchantOmsDataImportCommunicationTester extends Actor
 {
     use _generated\MerchantOmsDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function assertStateMachineProcessDatabaseTableContainsData(): void
     {
         $this->assertTrue(
@@ -41,27 +38,16 @@ class MerchantOmsDataImportCommunicationTester extends Actor
         );
     }
 
-    /**
-     * @param string $reference
-     *
-     * @return \Orm\Zed\Merchant\Persistence\SpyMerchant|null
-     */
     public function findMerchantByReference(string $reference): ?SpyMerchant
     {
         return $this->getMerchantPropelQuery()->filterByMerchantReference($reference)->findOne();
     }
 
-    /**
-     * @return \Orm\Zed\Merchant\Persistence\SpyMerchantQuery
-     */
     protected function getMerchantPropelQuery(): SpyMerchantQuery
     {
         return SpyMerchantQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\StateMachine\Persistence\SpyStateMachineProcessQuery
-     */
     protected function getStateMachineProcessPropelQuery(): SpyStateMachineProcessQuery
     {
         return SpyStateMachineProcessQuery::create();

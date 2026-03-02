@@ -19,27 +19,16 @@ use Spryker\Zed\MerchantOmsDataImport\Business\Step\StateMachineProcessWriterSte
  */
 class MerchantOmsDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStateMachineProcessWriterStep(): DataImportStepInterface
     {
         return new StateMachineProcessWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantWriterStep(): DataImportStepInterface
     {
         return new MerchantWriterStep();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getMerchantOmsProcessDataImporter(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterInterface {
