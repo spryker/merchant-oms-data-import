@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class MerchantOmsDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_OMS_PROCESS = 'merchant-oms-process';
